@@ -18,12 +18,12 @@ export default function Home() {
           name="description"
           content="A tool for creating animated background gradients in pure CSS."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://i.postimg.cc/fR1Q9n5q/year-of-monkey.png" />
       </Head>
 
       <SettingsProvider>
         <AnimatedBackground>
-          <main style={{ textAlign: "center", padding: "32px 32px 0" }}>
+          <main style={{ textAlign: "center", padding: "32px 8px" }}>
             {/* main 3d title -home page  */}
             {/* <h1 data-heading="Animated Gradient">
               <span contenteditable data-heading="Animated Gradient">Animated Gradient</span>
