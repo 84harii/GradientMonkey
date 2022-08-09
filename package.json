@@ -1,0 +1,32 @@
+{
+  "name": "animated-gradient-background-generator",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format-watch": "npm run format && onchange \"**/*.{js,jsx,json,md}\" -- prettier --write {{changed}}",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.0",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-color": "^2.19.3",
+    "react-dom": "17.0.2",
+    "react-particle-effect-button": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-next": "^11.0.1",
+    "onchange": "^7.1.0",
+    "prettier": "^2.3.2",
+    "tailwindcss": "^3.1.8"
+  },
+  "repository": "https://github.com/johnpolacek/animated-gradient-background-generator",
+  "license": "MIT-0",
+  "author": "John Polacek (https://johnpolacek.com/)"
+}

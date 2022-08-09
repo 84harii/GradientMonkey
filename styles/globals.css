@@ -1,0 +1,473 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: c;
+  src: url(../styles/GonziExpandedPERSONALUSE-Regular.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+
+@font-face {
+  font-family: 'I';
+  src: url('https://ggayane.github.io/css-experiments/Inconsolata-VF.ttf');
+  font-weight: 275 900;
+  font-stretch: 50% 200%;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Jost';
+  height: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.static {
+  font-size: 30px;
+  font-variation-settings: "wght"900, "wdth"200;
+  font-family: 'C';
+  letter-spacing: 1PX;
+}
+
+
+
+
+
+
+
+
+
+
+h1 {
+  font-family: "Rig Bold Face", sans-serif;
+  text-transform: uppercase;
+  font-size: 5vw;
+  text-align: center;
+  font-weight: normal;
+  margin: 0;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  color: #ffcb74;
+  width: 100%
+}
+
+h1:before,
+h1:after,
+h1 span:before,
+h1 span:after {
+  content: attr(data-heading);
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  font-weight: normal;
+  text-shadow: none;
+}
+
+h1:before {
+  color: #fff;
+  font-family: "Rig Bold Inline", sans-serif;
+}
+
+h1:after {
+  font-family: "Rig Bold Coarse", sans-serif;
+  color: #040351;
+}
+
+span::before {
+  font-family: "Rig Bold Shadow", sans-serif;
+  color: #cbc7e300;
+  z-index: -1;
+}
+
+span::after {
+  font-family: "Rig Bold Extrude", sans-serif;
+  color: #ffff;
+  z-index: -1;
+}
+
+@font-face {
+  font-family: "Rig Bold Coarse";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldCoarse.otf");
+}
+
+@font-face {
+  font-family: "Rig Bold Extrude";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldExtrude.otf");
+}
+
+@font-face {
+  font-family: "Rig Bold Shadow";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldShadow.otf");
+}
+
+@font-face {
+  font-family: "Rig Bold Face";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldFace.otf");
+}
+
+@font-face {
+  font-family: "Rig Bold Inline";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Rig-BoldInline.otf");
+}
+
+
+
+
+.h-button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  color: black;
+  text-decoration: none;
+}
+
+
+.h-button {
+  background: white;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  border-radius: 40px;
+  border: 1.4px solid black;
+}
+
+.h-button span {
+  display: inline-block;
+  min-width: 0.3em;
+  text-transform: uppercase;
+  transition: 0.25s cubic-bezier(0.5, -1, 0.5, 2);
+  opacity: 0;
+  transform: translate(0, -20px);
+}
+
+.h-button:before {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: 0.25s cubic-bezier(0.5, -1, 0.5, 2);
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  opacity: 1;
+  transform: translate(0, 0px);
+}
+
+.h-button:hover:before {
+  opacity: 0;
+  transform: translate(0, 20px);
+}
+
+.h-button:hover span {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.h-button:hover span:nth-child(1),
+.h-button:focus span:nth-child(1) {
+  transition-delay: 0.025s;
+}
+
+.h-button:hover span:nth-child(2),
+.h-button:focus span:nth-child(2) {
+  transition-delay: 0.05s;
+}
+
+.h-button:hover span:nth-child(3),
+.h-button:focus span:nth-child(3) {
+  transition-delay: 0.075s;
+}
+
+.h-button:hover span:nth-child(4),
+.h-button:focus span:nth-child(4) {
+  transition-delay: 0.1s;
+}
+
+.h-button:hover span:nth-child(5),
+.h-button:focus span:nth-child(5) {
+  transition-delay: 0.125s;
+}
+
+.h-button:hover span:nth-child(6),
+.h-button:focus span:nth-child(6) {
+  transition-delay: 0.15s;
+}
+
+.h-button:hover span:nth-child(6),
+.h-button:focus span:nth-child(6) {
+  transition-delay: 0.15s;
+}
+
+
+
+.bg-pattern {
+  background:
+    radial-gradient(black 0px, transparent 1px),
+    radial-gradient(black 0px, transparent 1px),
+    linear-gradient(#fff 5px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    #fff;
+  background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+  background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+
+
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  border-radius: 16px !important;
+}
+
+
+.sketch-picker {
+  box-shadow: none !important;
+  width: 80% !important;
+  margin: 0 auto;
+}
+
+.flexbox-fix {
+  justify-content: center;
+}
+
+.flexbox-fix div:focus {
+  border: none;
+}
+
+.sketch-picker div {
+  border-radius: 16px;
+}
+
+.output-div {
+  
+  border-radius:16px ;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='99%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='70' height='8' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,10)'/><path d='M-.02 22c8.373 0 11.938-4.695 16.32-9.662C20.785 7.258 25.728 2 35 2c9.272 0 14.215 5.258 18.7 10.338C58.082 17.305 61.647 22 70.02 22M-.02 14.002C8.353 14 11.918 9.306 16.3 4.339 20.785-.742 25.728-6 35-6 44.272-6 49.215-.742 53.7 4.339c4.382 4.967 7.947 9.661 16.32 9.664M70 6.004c-8.373-.001-11.918-4.698-16.3-9.665C49.215-8.742 44.272-14 35-14c-9.272 0-14.215 5.258-18.7 10.339C11.918 1.306 8.353 6-.02 6.002'  stroke-width='0.1500' stroke='hsla(258.5,59.4%,59.4%,1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>")
+
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #ffbc74;
+  border: none;
+  border-radius: 16px;
+  text-transform: uppercase;
+  color: #111;
+  font-family: 'c';
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.copy-btn:hover {
+  /* background-color: #f3f2f1; */
+  color: #040351;
+  padding: 7px 12px;
+  -webkit-box-shadow: 3px 25px 31.5px 12px #c7c7c7;
+  -moz-box-shadow: 3px 25px 31.5px 12px #c7c7c7;
+  box-shadow: 3px 25px 31.5px 12px #c7c7c7;
+}
+
+
+
+
+
+
+/* ///////////////////////////////////// marquee animation */
+
+
+
+.section {
+  position: relative;
+  width: 40vw;
+  height: 80vh;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.section .scroll {
+  width: 100%;
+  display: flex;
+}
+
+.section .scroll div {
+  color: #000000;
+  font-size: 3.5em;
+  background: #eeeeeeee;
+  white-space: nowrap;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  animation: scroll1 30s linear infinite;
+  animation-delay: -40s;
+}
+
+.section .scroll div:nth-child(2) {
+  animation: scroll2 30s linear infinite;
+  animation-delay: -25s;
+}
+
+.section .scroll div span {
+  font-weight: 100;
+}
+
+.section .scroll:nth-child(even) div {
+  animation-direction: reverse;
+}
+
+.section .scroll:nth-child(even) div:nth-child(2) {
+  animation-direction: reverse;
+}
+
+.section .scroll.text-1 {
+  transform: rotate(15deg) translateY(100px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section .scroll.text-2 {
+  transform: rotate(-10deg) translateY(480px) translateX(-100px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section .scroll.text-3 {
+  transform: rotate(-15deg) translateY(-100px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section .scroll.text-4 {
+  transform: rotate(10deg) translateY(-250px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section .scroll.text-5 {
+  transform: rotate(10deg) translateY(320px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section .scroll.text-6 {
+  transform: rotate(5deg) translateY(100px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@100;700&display=swap";
+
+@keyframes scroll1 {
+  0% {
+    transform: translate(100%);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-200%);
+  }
+}
+
+.illustration {
+  position: absolute;
+  width: 100%;
+}
+
+
+
+/* ? 🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠   real shadow image  🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠🟠 */
+
+
+:root {
+  --size: 150px;
+  --radius: calc(var(--size) * 20 / 100);
+}
+
+.main-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  background-color: #ffffff;
+}
+
+.image-card {
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--radius);
+  position: relative;
+  background-size: cover;
+  margin: calc(var(--size) * 20 / 100);
+}
+
+.image-card:before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  border-radius: var(--radius);
+  z-index: -1;
+  filter: blur(12px);
+  opacity: 0.6;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+
+.heading {
+  font-family: 'C';
+  letter-spacing: 4px;
+  padding: 0 16px;
+  margin-bottom: 5px;
+}
+
+.logo {
+
+  margin-bottom: -8px;
+}
