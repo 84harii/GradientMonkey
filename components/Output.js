@@ -13,17 +13,17 @@ const Output = () => {
     colorSelection.length * 60 + "%" + " " + colorSelection.length * 60 + "%"
 
   const animation =
-    "gradient-animation " +
+    "gradient-monkey " +
     colorSelection.length * Math.abs(speed - 11) +
     "s ease infinite"
 
-  const code = `.gradient-background {
+  const code = `.gradient-monkey {
   background: ${background};
   background-size: ${backgroundSize};
   animation: ${animation};
 }
 
-@keyframes gradient-animation {
+@keyframes gradient-monkey {
   0% {
     background-position: 0% 50%;
   }
