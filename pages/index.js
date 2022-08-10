@@ -45,7 +45,7 @@ export default function Home() {
           <footer style={{ textAlign: "center", padding: "0 32px 64px" }}>
             <p>
               Designed by  {" "}
-              <a href="http://instagram.com/harii.84" target='_harii'>HARII</a> <img src='https://i.postimg.cc/wv91SbZ2/icons8-instagram.gif' alt='instagram logo' />
+              <a href="http://instagram.com/harii.84" target='_harii'>HARII</a>  
             </p>
           </footer>
 
