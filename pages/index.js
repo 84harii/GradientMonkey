@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>AnimeGradient - HARII</title>
+        <title>GradientMonkey - HARII</title>
         <meta
           name="description"
           content="A tool for creating animated background gradients in pure CSS."
